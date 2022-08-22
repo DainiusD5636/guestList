@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svečių sąrašas</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label {
+        margin-bottom: 25px;
+      }
+      .inputs {
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+      button {
+        width: 200px;
+        background-color: blue;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 15px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Svečių sąrašas</h1>
+    </div>
+    <div class="inputs" id="names">
+      <label>Vardas, Pavardė:</label>
+      <input id="fullName" />
+    </div>
+    <div id="buttons">
+      <button id="addToEnd">Add Guest @ list End</button>
+      <button id="addToStart">Add Guest @ list Start</button>
+      <button id="removeFirst">Remove First</button>
+      <button id="removeLast">Remove Last</button>
+      <button id="reverseList">Reverse List</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
