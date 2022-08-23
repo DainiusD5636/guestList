@@ -3,6 +3,7 @@ let addToStart = document.querySelector("#addToStart");
 let removeFirst = document.querySelector("#removeFirst");
 let removeLast = document.querySelector("#removeLast");
 let reverseList = document.querySelector("#reverseList");
+let removeFromTo = document.querySelector("#removeFromTo");
 
 let guestList = [];
 
@@ -45,13 +46,13 @@ function listOfNames() {
   if (document.querySelector(".new")) {
     document.querySelector(".new").remove();
   }
+  let newList = document.createElement("div");
   for (let i = 0; i < guestList.length; i++) {
-    let newList = document.createElement("div");
     newList.className = "new";
     let newName = document.createElement("p");
     newList.append(newName);
 
-    newList.textContent = guestList[i];
+    newName.textContent = guestList[i];
 
     document.body.append(newList);
   }
