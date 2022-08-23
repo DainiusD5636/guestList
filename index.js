@@ -40,8 +40,19 @@ reverseList.addEventListener("click", (event) => {
   console.log(guestList);
   listOfNames();
 });
+
 function listOfNames() {
-  let newName = document.createElement("p");
-  newName.textContent = guestList;
-  document.getElementById("names").append(newName);
+  if (document.querySelector(".new")) {
+    document.querySelector(".new").remove();
+  }
+  for (let i = 0; i < guestList.length; i++) {
+    let newList = document.createElement("div");
+    newList.className = "new";
+    let newName = document.createElement("p");
+    newList.append(newName);
+
+    newList.textContent = guestList[i];
+
+    document.body.append(newList);
+  }
 }
